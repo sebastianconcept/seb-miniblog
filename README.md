@@ -1,6 +1,6 @@
-# sapper-miniblog
+# seb-miniblog
 
-A minimalistic blog built on Sapper.
+My personal blog built on [sapper-miniblog](https://github.com/sebastianconcept/sapper-miniblog).
 
 ### Install
 
