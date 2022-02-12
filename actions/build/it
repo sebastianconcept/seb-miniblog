@@ -4,5 +4,5 @@ VERSION=1.0.0
 BASENAME=seb-miniblog
 LABEL=$BASENAME
 PUBLISHINGNAME=$LABEL:$VERSION
-docker build -f ./actions/deploy/Dockerfile -t $BASENAME:latest .
+DOCKER_BUILDKIT=1 docker build -f ./actions/deploy/Dockerfile -t $BASENAME:latest .
 docker tag $BASENAME:latest $PUBLISHINGNAME
