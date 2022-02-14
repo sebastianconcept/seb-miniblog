@@ -167,7 +167,6 @@
           class="form-input"
           type="date"
           bind:value={publishedAt}
-          value={publishedAt}
           placeholder="Publication date" />
       </div>
       <br />
