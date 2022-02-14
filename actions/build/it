@@ -1,0 +1,8 @@
+#!/bin/bash
+VERSION=1.0.1
+BASENAME=seb-miniblog
+LABEL=$BASENAME
+PUBLISHINGNAME=$LABEL:$VERSION
+DOCKER_BUILDKIT=1 docker build -f ./actions/build/Dockerfile -t $BASENAME .
+docker tag $BASENAME:latest $PUBLISHINGNAME
+docker tag $PUBLISHINGNAME sebastianconcept/$PUBLISHINGNAME
