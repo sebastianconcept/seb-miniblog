@@ -4,7 +4,6 @@
   import marked from "marked";
 
   import ArticleMeta from "./ArticleMeta.svelte";
-  import Ad from "./Ad.svelte";
 
   import hljs from "highlight.js/lib/highlight";
   import javascript from "highlight.js/lib/languages/javascript";
@@ -35,7 +34,6 @@
   <title>{article.title}</title>
 </svelte:head>
 <div class="article-container">
-  <Ad />
   {#if article}
     <div class="banner">
       <div class="container">

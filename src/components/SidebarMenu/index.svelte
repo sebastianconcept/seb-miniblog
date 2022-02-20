@@ -5,7 +5,6 @@
   import TopTen from "./TopTen";
   import Tags from "./Tags";
   import About from "./About";
-  import Ad from "./Ad";
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
@@ -25,7 +24,6 @@
   <!-- <Subscribe /> -->
   <!-- <TopTen /> -->
   <!-- <Tags /> -->
-  <!-- <Ad /> -->
   <About />
 
 </div>

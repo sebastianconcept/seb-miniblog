@@ -25,5 +25,7 @@ STOPSIGNAL SIGTERM
 
 COPY ./actions/service/start ../start
 
+RUN mkdir -p /opt/db
+
 WORKDIR /opt/
 CMD "./start"
