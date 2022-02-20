@@ -14,10 +14,10 @@
 
 <div class="home-page">
   <div class="container">
-    <div class="columns header">
-      <Header />
-    </div>
-    <div class="columns">
+    <Header />
+    <!-- <div class="columns header">
+    </div> -->
+    <div class="columns main-columns">
       <div class="col-8 col-sm-12 float-right ">
         <ArticleList {showPublishingState} {selection} />
       </div>
@@ -32,5 +32,9 @@
   .header {
     background-color: #303742;
     padding-bottom: 1rem;
+  }
+
+  .main-columns {
+    margin-right: 0;
   }
 </style>
