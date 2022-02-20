@@ -25,7 +25,7 @@
   <!-- <Subscribe /> -->
   <!-- <TopTen /> -->
   <!-- <Tags /> -->
-  <Ad />
+  <!-- <Ad /> -->
   <About />
 
 </div>
