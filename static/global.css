@@ -85,3 +85,11 @@ h3 {
 .sidebar-section a:hover {
   color: #73a5df;
 }
+
+a {
+  color: #4f7fdf
+}
+
+a:hover {
+  color: #4069bb;
+}
