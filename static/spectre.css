@@ -1419,17 +1419,17 @@ input.disabled + .form-icon {
 }
 
 code {
-  background: #e9f3f4;
+  background: #3d3d3d;
   border-radius: 0.1rem;
-  color: #47b7cc;
+  color: #ca991d;
   font-size: 85%;
   line-height: 1.25;
-  padding: 0.1rem 0.2rem;
+  padding: 0.15rem 0.2rem;
 }
 
 .code {
   border-radius: 0.1rem;
-  color: #3b4351;
+  color: #ca991d;
   position: relative;
 }
 
