@@ -14,6 +14,10 @@
 
   onMount(() => hljs.initHighlightingOnLoad());
 
+  const environmentConfig = require("../../config/environment");
+  const config = environmentConfig.get(process.env.NODE_ENV || "production");
+  const baseUrl = config.baseUrl;
+
   export let article;
   let markup;
 
@@ -24,14 +28,13 @@
   }
 </script>
 
-<style>
-  .container {
-    padding-right: 1.4rem;
-  }
-</style>
-
 <svelte:head>
   <title>{article.title}</title>
+  <meta property="og:title" content={article.title} />
+  <meta property="og:description" content={article.excerpt} />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{baseUrl}/{article.slug}/" />
+  <meta property="og:image" content="{baseUrl}/profile.png" />
 </svelte:head>
 <div class="article-container">
   {#if article}
@@ -59,12 +62,19 @@
       </div>
 
       <hr />
-
-      <div class="empty">
-        <div class="empty-icon">
-          <i class="icon icon-3x icon-more-horiz" />
-        </div>
+      <div class="empty" />
+    </div>
+  {:else}
+    <div class="empty">
+      <div class="empty-icon">
+        <i class="icon icon-3x icon-more-horiz" />
       </div>
     </div>
   {/if}
 </div>
+
+<style>
+  .container {
+    padding-right: 1.4rem;
+  }
+</style>
