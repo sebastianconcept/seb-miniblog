@@ -9,10 +9,12 @@
   import javascript from "highlight.js/lib/languages/javascript";
   import smalltalk from "highlight.js/lib/languages/smalltalk";
 
-  hljs.registerLanguage("javascript", javascript);
-  hljs.registerLanguage("smalltalk", smalltalk);
-
-  onMount(() => hljs.initHighlightingOnLoad());
+  onMount(() => {
+    hljs.registerLanguage("javascript", javascript);
+    hljs.registerLanguage("smalltalk", smalltalk);
+    hljs.initHighlighting.called = false;
+    hljs.initHighlighting();
+  });
 
   const environmentConfig = require("../../config/environment");
   const config = environmentConfig.get(process.env.NODE_ENV || "production");
