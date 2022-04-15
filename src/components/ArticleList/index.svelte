@@ -6,9 +6,15 @@
   import * as api from "../../api.js";
   import hljs from "highlight.js/lib/highlight";
   import javascript from "highlight.js/lib/languages/javascript";
+  import smalltalk from "highlight.js/lib/languages/smalltalk";
 
-  hljs.registerLanguage("javascript", javascript);
-  onMount(() => hljs.initHighlightingOnLoad());
+  onMount(() => {
+    hljs.registerLanguage("javascript", javascript);
+    hljs.registerLanguage("smalltalk", smalltalk);
+    hljs.initHighlighting.called = false;
+    hljs.initHighlighting();
+  });
+
   export let currentPage = 1;
   let isLastPage = false;
 
@@ -28,9 +34,9 @@
     const endpoint = "articles";
     let params = "";
     if ($session.search) {
-      params = `filter=${
-        $session.search
-      }&limit=${pageSize}&offset=${(currentPage - 1) * pageSize}`;
+      params = `filter=${$session.search}&limit=${pageSize}&offset=${
+        (currentPage - 1) * pageSize
+      }`;
     } else {
       params = `limit=${pageSize}&offset=${(currentPage - 1) * pageSize}`;
     }
@@ -65,12 +71,6 @@
   }
 </script>
 
-<style>
-  .container {
-    padding-right: 1.4rem;
-  }
-</style>
-
 <div class="container">
   {#if articles}
     {#if articles.length === 0}
@@ -92,3 +92,9 @@
     <div class="loading loading-lg" />
   {/if}
 </div>
+
+<style>
+  .container {
+    padding-right: 1.4rem;
+  }
+</style>

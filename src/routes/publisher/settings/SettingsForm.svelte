@@ -21,7 +21,8 @@
         class="form-control"
         type="text"
         placeholder="URL of profile picture"
-        bind:value={image} />
+        bind:value={image}
+      />
     </fieldset>
 
     <fieldset class="form-group">
@@ -29,7 +30,8 @@
         class="form-control form-control-lg"
         type="text"
         placeholder="Username"
-        bind:value={username} />
+        bind:value={username}
+      />
     </fieldset>
 
     <fieldset class="form-group">
@@ -37,7 +39,8 @@
         class="form-control form-control-lg"
         rows="8"
         placeholder="Short bio about you"
-        bind:value={bio} />
+        bind:value={bio}
+      />
     </fieldset>
 
     <fieldset class="form-group">
@@ -45,7 +48,8 @@
         class="form-control form-control-lg"
         type="email"
         placeholder="Email"
-        bind:value={email} />
+        bind:value={email}
+      />
     </fieldset>
 
     <fieldset class="form-group">
@@ -53,13 +57,15 @@
         class="form-control form-control-lg"
         type="password"
         placeholder="New Password"
-        bind:value={password} />
+        bind:value={password}
+      />
     </fieldset>
 
     <button
       class="btn btn-lg btn-primary pull-xs-right"
       type="submit"
-      disabled={inProgress}>
+      disabled={inProgress}
+    >
       Update Settings
     </button>
   </fieldset>

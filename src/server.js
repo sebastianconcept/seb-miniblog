@@ -1,53 +1,53 @@
-import sirv from 'sirv'
-import express from 'express'
-import compression from 'compression'
-import bodyParser from 'body-parser'
-import cookieParser from 'cookie-parser'
-import session from 'express-session'
-import sessionFileStore from 'session-file-store'
-import * as sapper from '@sapper/server'
-import { db } from './db'
+import sirv from "sirv";
+import express from "express";
+import compression from "compression";
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
+import session from "express-session";
+import sessionFileStore from "session-file-store";
+import * as sapper from "@sapper/server";
+import { db } from "./db";
 
-const app = express()
-const FileStore = sessionFileStore(session)
+const app = express();
+const FileStore = sessionFileStore(session);
 
-const { PORT, NODE_ENV } = process.env
-const dev = NODE_ENV === 'development'
+const { PORT, NODE_ENV } = process.env;
+const dev = NODE_ENV === "development";
 
-function hasSignedIn (req) {
-  return req.session.user && req.cookies.uid
+function hasSignedIn(req) {
+  return req.session.user && req.cookies.uid;
 }
 
 app
   .use(bodyParser.json())
   .use(
     session({
-      key: 'uid',
-      secret: 'miniblog',
+      key: "uid",
+      secret: "miniblog",
       resave: false,
       saveUninitialized: true,
       cookie: {
-        maxAge: 31536000
+        maxAge: 31536000,
       },
       store: new FileStore({
-        path: process.env.NOW ? `/tmp/sessions` : `.sessions`
-      })
+        path: process.env.NOW ? `/tmp/sessions` : `.sessions`,
+      }),
     })
   )
   // initialize cookie-parser to allow us access the cookies stored in the browser.
   .use(cookieParser())
   .use(
     compression({ threshold: 0 }),
-    sirv('static', { dev }),
+    sirv("static", { dev }),
     sapper.middleware({
-      session: req => {
+      session: (req) => {
         /** Stores the initial path to redirect after the sign-in guard */
-        !req.session.initialPath ? (req.session.initialPath = req.path) : null
+        !req.session.initialPath ? (req.session.initialPath = req.path) : null;
         return {
           user: req.session && req.session.user,
-          initialPath: req.session && req.session.initialPath
-        }
-      }
+          initialPath: req.session && req.session.initialPath,
+        };
+      },
     })
   )
   /**
@@ -58,10 +58,10 @@ app
    */
   .use((req, res, next) => {
     if (req.cookies.uid && !req.session.user) {
-      res.clearCookie('uid')
+      res.clearCookie("uid");
     }
-    next()
+    next();
   })
-  .listen(PORT, err => {
-    if (err) console.log('error', err)
-  })
+  .listen(PORT, (err) => {
+    if (err) console.log("error", err);
+  });

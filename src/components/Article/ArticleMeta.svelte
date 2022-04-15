@@ -11,6 +11,14 @@
   }
 </script>
 
+<div class="article-meta">
+  <div class="info float-left">
+    <span class="date">{new Date(date).toDateString()}</span>
+  </div>
+
+  <div class="quantity-of-words float-right">{words()} words</div>
+</div>
+
 <style>
   .quantity-of-words {
     color: #ccc;
@@ -22,12 +30,3 @@
     width: 100%;
   }
 </style>
-
-<div class="article-meta">
-  <div class="info float-left">
-    <span class="date">{new Date(date).toDateString()}</span>
-  </div>
-
-  <div class="quantity-of-words float-right">{words()} words</div>
-
-</div>

@@ -18,13 +18,13 @@
   }
 </script>
 
-<style>
-
-</style>
-
 <div class="article-preview">
   <ArticleMeta {article} />
-  <a href="/article/{article.slug}" rel="prefetch" class="preview-link">
+  <a
+    href="/article/{article.slug}"
+    rel="prefetch"
+    class="preview-link title-link"
+  >
     <h2>{article.title}</h2>
   </a>
   <h3>{article.subtitle}</h3>
@@ -32,3 +32,9 @@
     {@html markup}
   </div>
 </div>
+
+<style>
+  .title-link {
+    color: #303742;
+  }
+</style>

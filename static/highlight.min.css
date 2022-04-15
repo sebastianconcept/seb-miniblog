@@ -42,29 +42,33 @@ pre code.hljs {
 
 code.hljs {
   padding: 3px 5px;
+  overflow-x: auto;
+  padding: 1em;
+  border-radius: 0.25em;
+  background-color: #3d3d3d;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
 }
 
 .hljs {
-  color: #a89984;
-  background: #282c34;
+  color: #729fcf;
+  background: #303742;
 }
 
 .hljs::selection,
 .hljs ::selection {
   background-color: #3e4451;
-  color: #a89984;
+  color: #729fcf;
 }
-
 
 /* purposely do not highlight these things */
 .hljs-formula,
 .hljs-params,
-.hljs-property
-{}
+.hljs-property {
+}
 
 /* base03 - #665c54 -  Comments, Invisibles, Line Highlighting */
 .hljs-comment {
-  color: #665c54;
+  color: #68707c;
 }
 
 /* base04 - #928374 -  Dark Foreground (Used for status bars) */
@@ -100,19 +104,18 @@ code.hljs {
 .hljs-attr,
 .hljs-variable.constant_,
 .hljs-literal {
-  color: #a07e3b;
+  color: #8ae234;
 }
 
 /* base0A - Classes, Markup Bold, Search Text Background */
 .hljs-title,
 .hljs-class .hljs-title,
-.hljs-title.class_
-{
-  color: #a07e3b;
+.hljs-title.class_ {
+  color: #fcaf3e;
 }
 
 .hljs-strong {
-  font-weight:bold;
+  font-weight: bold;
   color: #a07e3b;
 }
 
@@ -121,7 +124,7 @@ code.hljs {
 .hljs-addition,
 .hljs-title.class_.inherited__,
 .hljs-string {
-  color: #528b8b;
+  color: #dbcd80;
 }
 
 /* base0C - Support, Regular Expressions, Escape Characters, Markup Quotes */
@@ -151,10 +154,10 @@ code.hljs {
 .hljs-template-tag,
 .diff .hljs-meta,
 .hljs-keyword {
-  color: #d75f5f;
+  color: #fcaf3e;
 }
 .hljs-emphasis {
-  color: #d75f5f;
+  color: #fcaf3e;
   font-style: italic;
 }
 
@@ -165,8 +168,7 @@ code.hljs {
   from leaking into meta by accident
 */
 .hljs-meta .hljs-keyword,
-.hljs-meta .hljs-string
-{
+.hljs-meta .hljs-string {
   color: #a87322;
 }
 

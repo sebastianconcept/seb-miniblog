@@ -25,7 +25,8 @@
           rel="prefetch"
           href="/publisher/drafts"
           class="nav-link"
-          class:active={$page.path === '/publisher/drafts'}>
+          class:active={$page.path === "/publisher/drafts"}
+        >
           Drafts
         </a>
       </li>
@@ -35,7 +36,8 @@
           rel="prefetch"
           href="/publisher/published"
           class="nav-link"
-          class:active={$page.path === '/publisher/published'}>
+          class:active={$page.path === "/publisher/published"}
+        >
           Published
         </a>
       </li>
@@ -43,15 +45,15 @@
         <a
           rel="prefetch"
           class="nav-link"
-          class:active={$page.path === '/'}
-          href="/">
+          class:active={$page.path === "/"}
+          href="/"
+        >
           Blog
         </a>
       </li>
       <li class="nav-item">
         <button on:click={onSignOut}>Sign out</button>
       </li>
-
     </ul>
   </div>
 </nav>

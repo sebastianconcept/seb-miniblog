@@ -8,12 +8,6 @@
   }
 </script>
 
-<style>
-  h4 {
-    color: #fff;
-  }
-</style>
-
 <div class="publisher-search">
   <form on:submit|preventDefault={onSubmit}>
     <h4>Subscribe</h4>
@@ -23,8 +17,15 @@
         class="form-control form-control-lg"
         type="text"
         placeholder="Your email address"
-        bind:value={emailAddress} />
+        bind:value={emailAddress}
+      />
     </fieldset>
     <button on:click={onSubmit}>Subscribe</button>
   </form>
 </div>
+
+<style>
+  h4 {
+    color: #fff;
+  }
+</style>

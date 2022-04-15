@@ -1,6 +1,10 @@
 <script>
-
 </script>
+
+<div class="container">
+  <h1 class="logo-font">Miniblog</h1>
+  <p>A medium to share your knowledge.</p>
+</div>
 
 <style>
   h1,
@@ -30,8 +34,3 @@
     border-bottom: 2px solid #303742;
   }
 </style>
-
-<div class="container">
-  <h1 class="logo-font">Miniblog</h1>
-  <p>A medium to share your knowledge.</p>
-</div>

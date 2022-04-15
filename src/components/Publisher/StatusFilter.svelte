@@ -5,10 +5,9 @@
   const dispatch = createEventDispatcher();
 </script>
 
+<button on:click={() => dispatch("published")}>Published</button>
+<button on:click={() => dispatch("drafts")}>Drafts</button>
+<button on:click={() => dispatch("all")}>All</button>
+
 <style>
-
 </style>
-
-<button on:click={() => dispatch('published')}>Published</button>
-<button on:click={() => dispatch('drafts')}>Drafts</button>
-<button on:click={() => dispatch('all')}>All</button>

@@ -30,12 +30,6 @@
   }
 </script>
 
-<style>
-  .publisher-search {
-    margin: 2em 0;
-  }
-</style>
-
 <div class="publisher-search">
   <form class="" on:submit|preventDefault={onSubmit}>
     <div class="form-group">
@@ -47,16 +41,24 @@
           name="search"
           placeholder="Search title, tag or content"
           on:keyup={onSearch()}
-          bind:value={searchTarget} />
+          bind:value={searchTarget}
+        />
         <button class="btn btn-lg btn-primary input-group-btn" type="submit">
           <i class="icon icon-search" />
         </button>
         <button
           class="btn btn-lg input-group-btn"
-          on:click|preventDefault={onReset}>
+          on:click|preventDefault={onReset}
+        >
           <i class="icon icon-refresh" />
         </button>
       </div>
     </div>
   </form>
 </div>
+
+<style>
+  .publisher-search {
+    margin: 2em 0;
+  }
+</style>

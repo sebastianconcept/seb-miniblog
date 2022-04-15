@@ -18,12 +18,6 @@
   }
 </script>
 
-<style>
-  .excerpt-text {
-    margin: 1em 0;
-  }
-</style>
-
 <div class="article-preview">
   <ArticleMeta {article} />
   <a href="/publisher/editor/{article.slug}" class="article-title-link">
@@ -35,3 +29,9 @@
   </div>
   <!-- <Claps quantity={article.claps} /> -->
 </div>
+
+<style>
+  .excerpt-text {
+    margin: 1em 0;
+  }
+</style>

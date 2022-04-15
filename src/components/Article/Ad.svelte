@@ -1,6 +1,9 @@
 <script>
-
 </script>
+
+<section class="top-ad-section">
+  <div data-unit="top798x90" class="display-top" />
+</section>
 
 <style>
   .display-top {
@@ -12,7 +15,3 @@
     margin-bottom: 2em;
   }
 </style>
-
-<section class="top-ad-section">
-  <div data-unit="top798x90" class="display-top" />
-</section>

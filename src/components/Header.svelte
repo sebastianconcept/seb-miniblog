@@ -16,6 +16,6 @@
 
   .header-wrapper {
     background-color: #303742;
-    padding-bottom: 1rem;    
+    padding-bottom: 1rem;
   }
 </style>

@@ -45,7 +45,8 @@
     {#if !article.publishedAt}
       <button
         class="btn btn-primary float-right"
-        on:click|preventDefault={onPublish}>
+        on:click|preventDefault={onPublish}
+      >
         Publish
       </button>
     {/if}

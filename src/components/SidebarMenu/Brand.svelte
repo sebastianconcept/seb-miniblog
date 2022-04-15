@@ -1,6 +1,9 @@
 <script>
-
 </script>
+
+<section class="sidebar-section">
+  <h2>Seb's Blog</h2>
+</section>
 
 <style>
   h2 {
@@ -9,7 +12,3 @@
     margin-top: 1.5em;
   }
 </style>
-
-<section class="sidebar-section">
-  <h2>Seb's Blog</h2>
-</section>
