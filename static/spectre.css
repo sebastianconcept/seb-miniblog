@@ -81,14 +81,14 @@ strong {
 }
 
 /** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
-code,
+/* code,
 kbd,
 pre,
 samp {
   font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier,
     monospace; /* 1 (changed) */
   font-size: 1em; /* 2 */
-}
+} */
 
 /** Add the correct font style in Android 4.3-. */
 dfn {
