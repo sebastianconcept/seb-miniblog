@@ -1,6 +1,9 @@
 <script>
-
 </script>
+
+<section class="sidebar-section">
+  <div data-unit="side250x250" class="sidebar-ad" />
+</section>
 
 <style>
   h4 {
@@ -16,7 +19,3 @@
     width: 250px;
   }
 </style>
-
-<section class="sidebar-section">
-  <div data-unit="side250x250" class="sidebar-ad" />
-</section>

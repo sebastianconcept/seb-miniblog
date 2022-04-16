@@ -14,10 +14,6 @@
   }
 </script>
 
-<style>
-
-</style>
-
 <div class="sidebar">
   <Brand />
   <Search on:search={onSearch} />
@@ -25,5 +21,7 @@
   <!-- <TopTen /> -->
   <!-- <Tags /> -->
   <About />
-
 </div>
+
+<style>
+</style>

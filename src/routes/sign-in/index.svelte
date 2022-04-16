@@ -26,12 +26,6 @@
   }
 </script>
 
-<style>
-  .sign-in-container {
-    margin-top: 4em;
-  }
-</style>
-
 <svelte:head>
   <title>Sign in • miniblog</title>
 </svelte:head>
@@ -54,7 +48,8 @@
                 type="email"
                 name="email"
                 placeholder="Email"
-                bind:value={email} />
+                bind:value={email}
+              />
             </fieldset>
             <fieldset class="form-group">
               <label class="form-label" for="password">Password</label>
@@ -63,20 +58,27 @@
                 type="password"
                 name="password"
                 placeholder="Password"
-                bind:value={password} />
+                bind:value={password}
+              />
             </fieldset>
           </div>
           <div class="panel-footer">
             <button
               class="btn btn-lg btn-primary pull-xs-right"
               type="submit"
-              disabled={!email || !password}>
+              disabled={!email || !password}
+            >
               Sign in
             </button>
           </div>
-
         </div>
       </form>
     </div>
   </div>
 </div>
+
+<style>
+  .sign-in-container {
+    margin-top: 4em;
+  }
+</style>

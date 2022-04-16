@@ -1,17 +1,17 @@
 module.exports = {
-  get (nodeEnv) {
-    return Object.assign({}, getEnvironment())[nodeEnv.toLowerCase()]
-  }
-}
+  get(nodeEnv) {
+    return Object.assign({}, getEnvironment())[nodeEnv.toLowerCase()];
+  },
+};
 
-function getEnvironment () {
+function getEnvironment() {
   return {
     production: {
-      baseUrl: `https://blog.sebastiansastre.co`
+      baseUrl: `https://blog.sebastiansastre.co`,
       // baseUrl: `https://sebastiansastre.co`
     },
     development: {
-      baseUrl: `http://localhost:3000`
-    }
-  }
+      baseUrl: `http://localhost:3000`,
+    },
+  };
 }

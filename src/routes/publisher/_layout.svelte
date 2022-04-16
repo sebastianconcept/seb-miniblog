@@ -15,6 +15,14 @@
   export let segment;
 </script>
 
+<!-- {#if preloading}
+  <div class="loading loading-lg" />
+{/if} -->
+
+<main>
+  <slot />
+</main>
+
 <style>
   main {
     position: relative;
@@ -24,11 +32,3 @@
     box-sizing: border-box;
   }
 </style>
-
-<!-- {#if preloading}
-  <div class="loading loading-lg" />
-{/if} -->
-
-<main>
-  <slot />
-</main>

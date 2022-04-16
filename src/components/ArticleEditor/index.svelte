@@ -34,15 +34,15 @@
   }
 
   onMount(() => {
-    import("easymde").then(module => {
+    import("easymde").then((module) => {
       const EasyMDE = module.default;
       contentEditor = new EasyMDE({
         showIcons: ["code"],
-        element: document.getElementById("content")
+        element: document.getElementById("content"),
       });
       excerptEditor = new EasyMDE({
         showIcons: ["code"],
-        element: document.getElementById("excerpt")
+        element: document.getElementById("excerpt"),
       });
       contentEditor.value(body);
       excerptEditor.value(excerpt);
@@ -99,19 +99,8 @@
   }
 </script>
 
-<style>
-  .article-editor {
-    margin-top: 2em;
-    margin-bottom: 4em;
-  }
-
-  .form-group {
-    margin-bottom: 1.4rem;
-  }
-</style>
-
 <svelte:head>
-  <title>{title || 'New Article'}</title>
+  <title>{title || "New Article"}</title>
   <link rel="stylesheet" href="easymde.min.css" />
 </svelte:head>
 
@@ -124,14 +113,16 @@
       <button
         class="btn btn-primary"
         on:click|preventDefault={onPreview}
-        disabled={!canSaveNow}>
+        disabled={!canSaveNow}
+      >
         Preview
       </button>
       {#if article.publishedAt}
         <button
           class="btn"
           on:click|preventDefault={onUnpublish}
-          disabled={!canSaveNow}>
+          disabled={!canSaveNow}
+        >
           Unpublish
         </button>
       {/if}
@@ -144,14 +135,16 @@
         <input
           class="form-input input-lg"
           bind:value={title}
-          placeholder="Title" />
+          placeholder="Title"
+        />
       </div>
       <div class="form-group">
         <h3>Subtitle</h3>
         <input
           class="form-input"
           bind:value={subtitle}
-          placeholder="Subtitle" />
+          placeholder="Subtitle"
+        />
       </div>
       <div class="form-group">
         <h3>Body</h3>
@@ -167,7 +160,8 @@
           class="form-input"
           type="date"
           bind:value={publishedAt}
-          placeholder="Publication date" />
+          placeholder="Publication date"
+        />
       </div>
       <br />
       <br />
@@ -175,9 +169,21 @@
       <br />
       <button
         class="btn btn-primary col-12 warning"
-        on:click|preventDefault={onDelete}>
+        on:click|preventDefault={onDelete}
+      >
         Delete
       </button>
     </form>
   </div>
 </div>
+
+<style>
+  .article-editor {
+    margin-top: 2em;
+    margin-bottom: 4em;
+  }
+
+  .form-group {
+    margin-bottom: 1.4rem;
+  }
+</style>

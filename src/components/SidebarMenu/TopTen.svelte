@@ -2,10 +2,6 @@
   export let topTenArticles;
 </script>
 
-<style>
-
-</style>
-
 {#if topTenArticles}
   <div className="tag-list">
     {#each topTenArticles as article}
@@ -17,3 +13,6 @@
 {:else}
   <div>Loading Top Ten Articles...</div>
 {/if}
+
+<style>
+</style>

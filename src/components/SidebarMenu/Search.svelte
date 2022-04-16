@@ -29,7 +29,8 @@
           class="form-input"
           type="text"
           placeholder="Search title, tag or content"
-          bind:value={searchTarget} />
+          bind:value={searchTarget}
+        />
         <div class="btn-group form-inline">
           <button class="btn input-group-btn" type="submit">
             <i class="icon icon-search" />

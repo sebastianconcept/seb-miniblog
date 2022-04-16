@@ -26,7 +26,7 @@
       publishedAt: undefined,
       tags: [],
       description: undefined,
-      clapsCount: 0
+      clapsCount: 0,
     };
   }
 </script>

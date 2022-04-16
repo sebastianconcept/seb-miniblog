@@ -11,7 +11,8 @@
       <a
         href="."
         class="tag-default tag-pill"
-        on:click={() => dispatch('select', { tag })}>
+        on:click={() => dispatch("select", { tag })}
+      >
         {tag}
       </a>
     {/each}
