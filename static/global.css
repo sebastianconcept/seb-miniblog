@@ -4,12 +4,8 @@ h3,
 h4,
 div {
   font-family: "Roboto", sans-serif;
-  /* color: #303742; */
 }
 
-/* a {
-  color: #303742 !important;
-} */
 
 h2 {
   font-size: 2em;
@@ -23,17 +19,6 @@ h3 {
 .date {
   color: #ccc;
 }
-
-/* .btn.btn-primary {
-  background: #303742;
-  border-color: #333;
-  color: #fff;
-} */
-
-/* .btn {
-  border: 0.05rem solid #303742;
-  color: #303742;
-} */
 
 .header-bar {
   margin-bottom: 1.4rem;
@@ -53,16 +38,6 @@ h3 {
   padding-bottom: 35px;
 }
 
-.sidebar-section {
-  margin-bottom: 70px;
-}
-
-.sidebar-container {
-  padding: 1em;
-  background-color: #303742;
-  color: #fff;
-}
-
 .article-container {
   margin-top: 2em;
 }
@@ -76,14 +51,6 @@ h3 {
 .article-content img {
   max-width: 90%;
   margin: 1em;
-}
-
-.sidebar-section a {
-  color: #5f89b9;
-}
-
-.sidebar-section a:hover {
-  color: #73a5df;
 }
 
 a {

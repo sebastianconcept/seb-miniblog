@@ -76,7 +76,4 @@
 </div>
 
 <style>
-  .container {
-    padding-right: 1.4rem;
-  }
 </style>

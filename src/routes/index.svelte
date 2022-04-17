@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-  <title>Miniblog</title>
+  <title>Sebastian Sastre</title>
 </svelte:head>
 
 <Home />

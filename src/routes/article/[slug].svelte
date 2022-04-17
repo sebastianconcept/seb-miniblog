@@ -13,7 +13,7 @@
   import { goto, stores } from "@sapper/app";
 
   import Article from "../../components/Article";
-  import SidebarMenu from "../../components/SidebarMenu";
+  // import SidebarMenu from "../../components/SidebarMenu";
 
   export let article;
 
@@ -28,13 +28,6 @@
 
 <div class="article-page">
   <div class="container">
-    <div class="columns">
-      <div class="col-8 col-sm-12 float-right">
-        <Article {article} />
-      </div>
-      <div class="col-4 col-sm-12 float-left sidebar-container">
-        <SidebarMenu on:search={onSearch} />
-      </div>
-    </div>
+    <Article {article} />
   </div>
 </div>
