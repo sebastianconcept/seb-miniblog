@@ -12,6 +12,9 @@
 <div class="header-wrapper">
   <header class="navbar">
     <section class="navbar-section">
+      <figure class="avatar subject-avatar">
+        <img src="/avatar.png" alt="avatar">
+      </figure>
       <a href="/" rel="prefetch" class="home-link title-link">
         <h1>Sebastian Sastre</h1>
       </a>
@@ -31,15 +34,27 @@
 <style>
   @media screen and (max-width: 600px) {
     .home-link h1 {
+      position: relative;
+      left: 7px;
       margin-top: 0.6em;
-      font-size: 1em;
+      font-size: 0.8em;
+    }
+    .subject-avatar {
+      width: 24px;
+      height: 24px;
     }
   }
 
   @media screen and (min-width: 601px) {
     .home-link h1 {
+      position: relative;
+      left: 7px;
       margin-top: 0.7em;
       font-size: 1.4em;
+    }
+    .subject-avatar {
+      width: 48px;
+      height: 48px;
     }
   }
   .home-link h1 {
