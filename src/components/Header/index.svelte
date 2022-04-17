@@ -24,26 +24,6 @@
       <Search on:search={onSearch} />
     </section>
   </header>
-
-  <!-- <img src="/profile.png" alt="profile image" /> -->
-  <!-- <div class="columns">
-    <div class="col-4 ">
-      <figure class="avatar badge" data-badge="8" data-initial="YZ">
-        <img src="img/avatar-3.png" alt="YZ">
-      </figure>
-      <a href="/" rel="prefetch" class="home-link title-link">
-        <h1>Sebastian Sastre</h1>
-      </a>
-    </div>
-    <div class="col-4 ">
-      <a href="http://sebastiansastre.co" rel="prefetch" class="title-link">
-        SITE
-      </a>
-    </div>
-    <div class="col-4 ">
-      <Search on:search={onSearch} />
-    </div>
-  </div> -->
 </div>
 
 <style>

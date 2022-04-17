@@ -2439,7 +2439,6 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .empty {
-  background: #f7f8f9;
   border-radius: 0.1rem;
   color: #66758c;
   padding: 3.2rem 1.6rem;

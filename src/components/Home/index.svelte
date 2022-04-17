@@ -9,13 +9,9 @@
 <div class="home-page">
   <div class="container">
     <Header />
-    <!-- <div class="columns header">
-    </div> -->
-    <!-- <div class="columns main-columns"> -->
     <div class=" main-column">
       <ArticleList {showPublishingState} {selection} />
     </div>
-    <!-- </div> -->
   </div>
 </div>
 
