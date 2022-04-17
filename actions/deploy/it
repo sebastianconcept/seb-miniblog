@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=node -pe "require('./package.json')['version']"
+VERSION=`node -pe "require('./package.json')['version']"`
 BASENAME=seb-miniblog
 LABEL=$BASENAME
 PUBLISHINGNAME=$LABEL:$VERSION
