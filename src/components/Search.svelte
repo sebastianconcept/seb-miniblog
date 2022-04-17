@@ -21,32 +21,45 @@
   }
 </script>
 
-<section class="sidebar-section">
-  <div class="publisher-search">
-    <form class="form-group" on:submit|preventDefault={onSubmit}>
-      <div class="input-group">
-        <input
-          class="form-input"
-          type="text"
-          placeholder="Search title, tag or content"
-          bind:value={searchTarget}
-        />
-        <div class="btn-group form-inline">
-          <button class="btn input-group-btn" type="submit">
-            <i class="icon icon-search" />
+<div class="search">
+  <form class="form-group" on:submit|preventDefault={onSubmit}>
+    <div class="input-group">
+      <input
+        class="form-input "
+        type="text"
+        placeholder="Search title, tag or content"
+        bind:value={searchTarget}
+      />
+      <div class="btn-group form-inline">
+        <button class="btn input-group-btn" type="submit">
+          <i class="icon icon-search" />
+        </button>
+        {#if searchTarget}
+          <button class="btn" on:click={onReset}>
+            <i class="icon icon-refresh" />
           </button>
-          {#if searchTarget}
-            <button class="btn input-group-btn" on:click={onReset}>
-              <i class="icon icon-refresh" />
-            </button>
-          {/if}
-        </div>
+        {/if}
       </div>
-    </form>
-  </div>
-</section>
+    </div>
+  </form>
+</div>
 
 <style>
+  @media screen and (max-width: 600px) {
+    .search {
+      width: 12em;
+    }
+    input {
+      font-size: 0.7em;
+    }
+  }
+
+  @media screen and (min-width: 601px) {
+    .search {
+      width: 18em;
+    }
+  }
+
   .btn {
     color: #ffffff;
   }

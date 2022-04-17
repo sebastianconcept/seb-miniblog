@@ -16,21 +16,39 @@
         <h1>Sebastian Sastre</h1>
       </a>
     </section>
-    <section class="navbar-center">
-      <a href="http://sebastiansastre.co" class="btn btn-link">SITE</a>
-      <!-- centered logo or brand -->
+    <section class="navbar-center hide-sm social-links">
+      <a href="http://sebastiansastre.co" class="btn btn-link">WEBSITE</a>
+      <a href="http://github.com/sebastianconcept" class="btn btn-link github">
+        <img src="/github.png" alt="github" />
+      </a>
     </section>
-    <section class="navbar-section">
+    <section class="navbar-section right-section">
       <Search on:search={onSearch} />
     </section>
   </header>
 </div>
 
 <style>
+  @media screen and (max-width: 600px) {
+    .home-link h1 {
+      margin-top: 0.6em;
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (min-width: 601px) {
+    .home-link h1 {
+      margin-top: 0.7em;
+      font-size: 1.4em;
+    }
+  }
   .home-link h1 {
     margin-top: 0.6em;
-    font-size: 1.4em;
     font-weight: bold;
+  }
+
+  .github img {
+    width: 20px;
   }
 
   a.home-link {
@@ -44,11 +62,14 @@
     color: #303742;
   }
 
-  a:hover.btn-link  {
+  a:hover.btn-link {
     color: #303742;
     text-decoration: none;
   }
 
+  .social-links {
+    margin-top: 5px;
+  }
   .header-wrapper {
     padding-top: 0.6rem;
   }
