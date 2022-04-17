@@ -1,7 +1,11 @@
 <script>
   import marked from "marked";
-
   import ArticleMeta from "../Article/ArticleMeta";
+  import { onMount } from "svelte";
+  import hljs from "highlight.js/lib/highlight";
+  import javascript from "highlight.js/lib/languages/javascript";
+  import smalltalk from "highlight.js/lib/languages/smalltalk";
+
   export let article;
   let markup;
 
@@ -16,6 +20,14 @@
       return article.body.split("\n")[0];
     }
   }
+
+
+  onMount(() => {
+    hljs.registerLanguage("javascript", javascript);
+    hljs.registerLanguage("smalltalk", smalltalk);
+    hljs.initHighlighting.called = false;
+    hljs.initHighlighting();
+  });
 </script>
 
 <div class="article-preview">

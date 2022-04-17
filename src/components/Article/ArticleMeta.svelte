@@ -1,7 +1,4 @@
 <script>
-  import { goto } from "@sapper/app";
-  import * as api from "../../api.js";
-
   export let article;
 
   let date = article.publishedAt || article.createdAt;

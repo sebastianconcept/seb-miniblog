@@ -45,3 +45,29 @@
     </form>
   </div>
 </section>
+
+<style>
+  .btn {
+    color: #ffffff;
+  }
+
+  .btn:focus,
+  .btn:hover {
+    color: #303742;
+    background: #f1f1fc;
+    border-color: #2a5572;
+    text-decoration: none;
+  }
+
+  /* .btn:active,
+  .btn.active {
+    background: #465663;
+    border-color: #2b3a57;
+    color: #303742;
+    text-decoration: none;
+  } */
+
+  button {
+    background-color: #303742;
+  }
+</style>

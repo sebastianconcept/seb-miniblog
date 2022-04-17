@@ -1520,10 +1520,7 @@ video.video-responsive::before {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  margin: auto;
   width: 100%;
 }
 
@@ -2442,7 +2439,6 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .empty {
-  background: #f7f8f9;
   border-radius: 0.1rem;
   color: #66758c;
   padding: 3.2rem 1.6rem;

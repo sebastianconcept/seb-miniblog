@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { stores } from "@sapper/app";
   import marked from "marked";
-
+  import Header from "../Header";
   import ArticleMeta from "./ArticleMeta.svelte";
 
   import hljs from "highlight.js/lib/highlight";
@@ -38,7 +38,12 @@
   <meta property="og:url" content="{baseUrl}/{article.slug}/" />
   <meta property="og:image" content="{baseUrl}/profile.png" />
 </svelte:head>
+
 <div class="article-container">
+  <div class="article-header">
+    <Header />
+  </div>
+
   {#if article}
     <div class="banner">
       <div class="container">
@@ -54,16 +59,9 @@
           <div class="text">
             {@html markup}
           </div>
-
-          <!-- <ul class="tag-list">
-          {#each article.tags as tag}
-            <li class="tag-default tag-pill tag-outline">{tag}</li>
-          {/each}
-        </ul> -->
         </div>
       </div>
 
-      <hr />
       <div class="empty" />
     </div>
   {:else}
@@ -76,7 +74,7 @@
 </div>
 
 <style>
-  .container {
-    padding-right: 1.4rem;
+  .article-header {
+    margin-bottom: 30px;
   }
 </style>
