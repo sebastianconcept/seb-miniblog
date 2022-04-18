@@ -27,7 +27,7 @@
       <input
         class="form-input "
         type="text"
-        placeholder="Search title, tag or content"
+        placeholder="Search by title or content"
         bind:value={searchTarget}
       />
       <div class="btn-group form-inline">
@@ -45,6 +45,9 @@
 </div>
 
 <style>
+  input {
+    margin-right: 0.25em;
+  }
   @media screen and (max-width: 600px) {
     .search {
       width: 12em;
@@ -71,14 +74,6 @@
     border-color: #2a5572;
     text-decoration: none;
   }
-
-  /* .btn:active,
-  .btn.active {
-    background: #465663;
-    border-color: #2b3a57;
-    color: #303742;
-    text-decoration: none;
-  } */
 
   button {
     background-color: #303742;

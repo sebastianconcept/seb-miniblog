@@ -42,9 +42,15 @@
   <div class="text excerpt-text">
     {@html markup}
   </div>
+  <a href="/article/{article.slug}" rel="prefetch" class="read-more-link"
+    >Read more...
+  </a>
 </div>
 
 <style>
+  a {
+    color: #4f7fdf;
+  }
   .title-link,
   h3,
   h2 {

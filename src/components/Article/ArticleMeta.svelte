@@ -10,18 +10,21 @@
 
 <div class="article-meta">
   <div class="info float-left">
-    <span class="date">{new Date(date).toDateString()}</span>
+    <span class="date-and-read-time"
+      >{new Date(date).toLocaleDateString("en-us", {
+        day: "numeric",
+        year: "numeric",
+        month: "long",
+      })} ・ {Math.round(words()/200)} min read</span
+    >
   </div>
-
-  <div class="quantity-of-words float-right">{words()} words</div>
 </div>
 
 <style>
-  .quantity-of-words {
-    color: #ccc;
+  .date-and-read-time {
+    color: #aaa;
     font-size: 0.8em;
   }
-
   .article-meta {
     display: inline-block;
     width: 100%;
