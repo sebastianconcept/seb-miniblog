@@ -21,7 +21,6 @@
     }
   }
 
-
   onMount(() => {
     hljs.registerLanguage("javascript", javascript);
     hljs.registerLanguage("smalltalk", smalltalk);
@@ -46,7 +45,16 @@
 </div>
 
 <style>
-  .title-link {
+  .title-link,
+  h3,
+  h2 {
     color: #303742;
+  }
+
+  h2 {
+    margin-bottom: 0.2em;
+  }
+  h3 {
+    font-size: 1.3em;
   }
 </style>

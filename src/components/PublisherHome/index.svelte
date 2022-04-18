@@ -29,7 +29,6 @@
     <Search />
   </div>
   <ArticleList {selection} />
-  <!-- <ArticleList {selection} bind:this={articleList} /> -->
 </div>
 
 <style>

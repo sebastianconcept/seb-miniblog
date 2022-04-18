@@ -16,6 +16,7 @@
   });
 
   export let currentPage = 1;
+  export let noItemsMessage = "No articles to display";
   let isLastPage = false;
 
   const { session, page } = stores();
@@ -75,10 +76,7 @@
   {#if articles}
     {#if articles.length === 0}
       <div class="empty">
-        <div class="empty-icon">
-          <i class="icon icon-3x icon-more-horiz" />
-        </div>
-        <p class="empty-title h5">No articles to display</p>
+        <p class="empty-title h5">{noItemsMessage}</p>
       </div>
     {:else}
       <div class="articles">

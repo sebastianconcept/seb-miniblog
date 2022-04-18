@@ -10,10 +10,10 @@ div {
 h2 {
   font-size: 2em;
   font-weight: bold;
+  color: #303742;
 }
 h3 {
   font-size: 1.5em;
-  color: #aaa;
 }
 
 .date {

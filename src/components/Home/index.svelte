@@ -4,13 +4,14 @@
 
   const showPublishingState = false;
   const selection = "published";
+  const noItemsMessage = "No articles matching that";
 </script>
 
 <div class="home-page">
   <div class="container">
     <Header />
     <div class=" main-column">
-      <ArticleList {showPublishingState} {selection} />
+      <ArticleList {showPublishingState} {selection} {noItemsMessage} />
     </div>
   </div>
 </div>
