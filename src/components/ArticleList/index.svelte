@@ -18,11 +18,12 @@
   export let currentPage = 1;
   export let noItemsMessage = "No articles to display";
   let isLastPage = false;
+  let isLoaded = undefined
 
   const { session, page } = stores();
 
   let query;
-  let articles = [];
+  let articles = undefined;
   let articlesCount;
   const pageSize = 10;
 
@@ -50,6 +51,7 @@
   async function getData() {
     // TODO do we need some error handling here?
     const answer = await api.get(query, $session.user && $session.user.token);
+    isLoaded = true
     articles = articles.concat(...answer.articles);
     articlesCount = answer.articlesCount;
   }
@@ -73,7 +75,7 @@
 </script>
 
 <div class="container">
-  {#if articles}
+  {#if isLoaded}
     {#if articles.length === 0}
       <div class="empty">
         <p class="empty-title h5">{noItemsMessage}</p>
@@ -92,4 +94,7 @@
 </div>
 
 <style>
+.loading {
+  margin-top: 3rem;
+}
 </style>
