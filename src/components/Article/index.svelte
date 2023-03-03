@@ -30,15 +30,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>{article.title}</title>
-  <meta property="og:title" content={article.title} />
-  <meta property="og:description" content={article.excerpt} />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="{baseUrl}/{article.slug}/" />
-  <meta property="og:image" content="{baseUrl}/profile.png" />
-</svelte:head>
-
 <div class="article-container">
   <div class="article-header">
     <Header />

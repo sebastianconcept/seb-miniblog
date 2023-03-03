@@ -23,7 +23,7 @@
   const { session, page } = stores();
 
   let query;
-  let articles = undefined;
+  let articles;
   let articlesCount;
   const pageSize = 10;
 
@@ -50,8 +50,10 @@
 
   async function getData() {
     // TODO do we need some error handling here?
+    debugger
     const answer = await api.get(query, $session.user && $session.user.token);
     isLoaded = true
+    console.log('answer',answer);
     articles = articles.concat(...answer.articles);
     articlesCount = answer.articlesCount;
   }
