@@ -55,6 +55,38 @@ export function updateSlug(article) {
   });
 }
 
+function sortPublishedArticles(a, b) {
+  const publishedA = new Date(a.publishedAt);
+  const publishedB = new Date(b.publishedAt);
+  if (publishedA > publishedB) {
+    return -1;
+  } else if (publishedA < publishedB) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+function sortDraftArticles(a, b) {
+  const updatedA = new Date(a.updatedAt);
+  const updatedB = new Date(b.updatedAt);
+  if (updatedA > updatedB) {
+    return -1;
+  } else if (updatedA < updatedB) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+function sortArticles(a, b) {
+  if (!!a.publishedAt) {
+    return sortPublishedArticles(a, b);
+  } else {
+    return sortDraftArticles(a, b);
+  }
+}
+
 export async function getArticles(selection, filterTarget, limit, offset) {
   let query;
   if (selection === "all") {
@@ -67,11 +99,7 @@ export async function getArticles(selection, filterTarget, limit, offset) {
   const all = await db.articles.find(query);
   const articles = all
     .filter((article) => isArticleMatch(article, filterTarget))
-    .sort(function (a, b) {
-      return a.publishedAt
-        ? new Date(b.publishedAt) - new Date(a.publishedAt)
-        : new Date(b.modifiedAt) - new Date(a.modifiedAt);
-    });
+    .sort(sortArticles);
   const start = offset;
   const end = start + limit;
   const filteredArticles = articles.slice(start, end);
