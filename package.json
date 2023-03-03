@@ -1,7 +1,7 @@
 {
   "name": "seb-miniblog",
   "description": "Sebastian Sastre's blog made with Sapper",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
