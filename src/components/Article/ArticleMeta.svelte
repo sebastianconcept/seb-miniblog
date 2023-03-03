@@ -1,7 +1,16 @@
 <script>
   export let article;
+  let updatedAt = new Date(article.updatedAt).toLocaleDateString("en-us", {
+    day: "numeric",
+    year: "numeric",
+    month: "long",
+  });
 
-  let date = article.publishedAt || article.createdAt;
+  let publishedAt = new Date(article.publishedAt).toLocaleDateString("en-us", {
+    day: "numeric",
+    year: "numeric",
+    month: "long",
+  });
 
   function words() {
     return article.body.split(" ").length;
@@ -10,13 +19,15 @@
 
 <div class="article-meta">
   <div class="info float-left">
+    {#if article.publishedAt}
     <span class="date-and-read-time"
-      >{new Date(date).toLocaleDateString("en-us", {
-        day: "numeric",
-        year: "numeric",
-        month: "long",
-      })} ・ {Math.round(words()/200)} min read</span
+      >{publishedAt} ・ {Math.round(words() / 200)} min read</span
     >
+    {:else}
+    <span class="date-and-read-time"
+    >Updated on {updatedAt} DRAFT・ {Math.round(words() / 200)} min read</span
+  >
+    {/if}
   </div>
 </div>
 

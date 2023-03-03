@@ -12,7 +12,6 @@
   }
 
   function basicSearch() {
-    // dispatch("search", { target: searchTarget });
     if (searchTarget !== $session.search) {
       $session.search = searchTarget;
     }

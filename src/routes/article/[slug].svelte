@@ -17,7 +17,6 @@
   import { goto } from "@sapper/app";
 
   import Article from "../../components/Article";
-  // import SidebarMenu from "../../components/SidebarMenu";
 
   export let article;
   const fullURL = `${baseUrl}/${article.slug}/`;

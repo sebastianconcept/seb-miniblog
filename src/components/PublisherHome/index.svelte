@@ -2,7 +2,6 @@
   import ArticleList from "../Publisher/ArticleList";
   import Search from "./Search";
   import ArticleFilter from "../ArticleFilter";
-  import * as api from "../../api.js";
   import { goto } from "@sapper/app";
 
   let selection = "drafts";
