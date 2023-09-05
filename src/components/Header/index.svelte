@@ -13,7 +13,7 @@
   <header class="navbar">
     <section class="navbar-section">
       <figure class="avatar subject-avatar">
-        <img src="/avatar.png" alt="avatar">
+        <img src="/avatar.png" alt="avatar" />
       </figure>
       <a href="/" rel="prefetch" class="home-link title-link">
         <h1>Sebastian Sastre</h1>
@@ -23,6 +23,12 @@
       <a href="http://sebastiansastre.co" class="btn btn-link">WEBSITE</a>
       <a href="http://github.com/sebastianconcept" class="btn btn-link github">
         <img src="/github.png" alt="github" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/sebastiansastre/"
+        class="btn btn-link linkedin"
+      >
+        <img src="/linkedin.png" alt="linkedin" height="18"/>
       </a>
     </section>
     <section class="navbar-section right-section">
