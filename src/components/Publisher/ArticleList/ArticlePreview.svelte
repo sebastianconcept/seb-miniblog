@@ -21,7 +21,7 @@
 <div class="page-header">
   <div class="container">
     <a
-      href="/article/{article.slug}"
+      href="/publisher/editor/{article.slug}"
       rel="prefetch"
       class="preview-link title-link"
     >
