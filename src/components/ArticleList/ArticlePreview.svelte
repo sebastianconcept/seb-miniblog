@@ -46,15 +46,6 @@
     </div>
   </div>
 
-  <!-- <ArticleMeta {article} />
-  <a
-    href="/article/{article.slug}"
-    rel="prefetch"
-    class="preview-link title-link"
-  >
-    <h2>{article.title}</h2>
-  </a> -->
-  <!-- <h3>{article.subtitle}</h3> -->
   <div class="text excerpt-text">
     {@html markup}
   </div>

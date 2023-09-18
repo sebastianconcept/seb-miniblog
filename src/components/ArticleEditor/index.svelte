@@ -178,6 +178,14 @@
 </div>
 
 <style>
+  input,
+  textarea {
+    margin-top: 0.8em;
+  }
+
+  h3 {
+    margin-bottom: 0.8em;
+  }
   .article-editor {
     margin-top: 2em;
     margin-bottom: 4em;
