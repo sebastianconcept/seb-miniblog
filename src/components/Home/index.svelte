@@ -10,7 +10,7 @@
 <div class="home-page">
   <div class="container">
     <Header />
-    <div class=" main-column">
+    <div class="main-column">
       <ArticleList {showPublishingState} {selection} {noItemsMessage} />
     </div>
   </div>
@@ -23,5 +23,7 @@
   }
   .main-column {
     margin-right: 0;
+    max-width: 680px;
+    margin: 0 auto;
   }
 </style>

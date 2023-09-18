@@ -50,7 +50,6 @@
 
   async function getData() {
     // TODO do we need some error handling here?
-    debugger
     const answer = await api.get(query, $session.user && $session.user.token);
     isLoaded = true
     console.log('answer',answer);

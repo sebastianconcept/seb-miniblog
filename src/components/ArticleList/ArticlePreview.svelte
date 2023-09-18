@@ -30,15 +30,31 @@
 </script>
 
 <div class="article-preview">
-  <ArticleMeta {article} />
+  <div class="page-header">
+    <div class="container">
+      <a
+        href="/article/{article.slug}"
+        rel="prefetch"
+        class="preview-link title-link"
+      >
+        <h2>{article.title}</h2>
+      </a>
+      {#if article.subtitle}
+        <h3>{article.subtitle}</h3>
+      {/if}
+      <ArticleMeta {article} />
+    </div>
+  </div>
+
+  <!-- <ArticleMeta {article} />
   <a
     href="/article/{article.slug}"
     rel="prefetch"
     class="preview-link title-link"
   >
     <h2>{article.title}</h2>
-  </a>
-  <h3>{article.subtitle}</h3>
+  </a> -->
+  <!-- <h3>{article.subtitle}</h3> -->
   <div class="text excerpt-text">
     {@html markup}
   </div>
@@ -49,18 +65,24 @@
 
 <style>
   a {
-    color: #4f7fdf;
+    display: block;
   }
   .title-link,
-  h3,
   h2 {
-    color: #303742;
+    margin-bottom: -0.27em;
+    text-decoration: none;
   }
 
-  h2 {
-    margin-bottom: 0.2em;
-  }
   h3 {
-    font-size: 1.3em;
+    margin-top: 0.92em;
+    font-style: normal;
+    letter-spacing: 0;
+    color: #6b6b6b;
+    font-weight: normal;
+  }
+
+  a.read-more-link {
+    color: #4f7fdf;
+    margin-top: 1.4em;
   }
 </style>

@@ -33,11 +33,12 @@
 
 <style>
   .date-and-read-time {
-    color: #aaa;
+    color: #6B6B6B;
     font-size: 0.8em;
   }
   .article-meta {
     display: inline-block;
     width: 100%;
+    margin-top: 1em;
   }
 </style>

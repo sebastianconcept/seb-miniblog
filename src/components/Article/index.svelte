@@ -36,23 +36,26 @@
   </div>
 
   {#if article}
-    <div class="banner">
-      <div class="container">
-        <ArticleMeta {article} user={$session.user} />
-        <h2>{article.title}</h2>
-        <h3>{article.subtitle}</h3>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row article-content">
-        <div class="col-xs-12">
-          <div class="text">
-            {@html markup}
-          </div>
+    <div class="page">
+      <div class="page-header">
+        <div class="container">
+          <h2>{article.title}</h2>
+          {#if article.subtitle}
+            <h3>{article.subtitle}</h3>
+          {/if}
+          <ArticleMeta {article} user={$session.user} />
         </div>
       </div>
 
+      <div class="page-body">
+        <div class="row article-content">
+          <div class="col-xs-12">
+            <div class="text">
+              {@html markup}
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="empty" />
     </div>
   {:else}
@@ -68,7 +71,19 @@
   .article-header {
     margin-bottom: 30px;
   }
-  h3,
+
+  h2 {
+    margin-bottom: -0.27em;
+  }
+
+  h3 {
+    margin-top: 0.92em;
+    font-style: normal;
+    letter-spacing: 0;
+    color: #6b6b6b;
+    font-weight: normal;
+  }
+  /* h3,
   h2 {
     color: #303742;
   }
@@ -78,5 +93,5 @@
   }
   h3 {
     font-size: 1.3em;
-  }
+  } */
 </style>
