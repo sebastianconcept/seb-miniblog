@@ -4,6 +4,8 @@ LABEL maintainer="Sebastian Sastre"
 RUN mkdir -p /opt/miniblog
 WORKDIR /opt/miniblog
 
+RUN echo "deb http://security.debian.org/debian-security bullseye-security main contrib non-free" > /etc/apt/sources.list
+
 RUN apt-get update \
   && apt-get -y upgrade \
   && rm -rf /var/lib/apt/lists/* \
